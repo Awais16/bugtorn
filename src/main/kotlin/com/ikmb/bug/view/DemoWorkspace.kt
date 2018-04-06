@@ -9,6 +9,8 @@ class DemoWorkspace : Workspace("Hello Workspace") {
         //workspace.dock(TestView1(),true)
         println("workspace.viewStack.size =${workspace.viewStack.size}")
 
+
+        //to test opeModel closing recursive ui bug.
         with(bottomDrawer) {
             item( "System Log") {
                 textarea {
@@ -18,8 +20,4 @@ class DemoWorkspace : Workspace("Hello Workspace") {
         }
     }
 
-    override fun onCreate() {
-        super.onCreate()
-        dock(TestView2(),true)
-    }
 }
