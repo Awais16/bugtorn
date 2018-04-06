@@ -21,7 +21,12 @@ class TestView1 : View("My View") {
                         timeout.playFromStart()
                     }
                 }
-                button("dock test"){
+                button("find(DemoWorkspace::class).dock()"){
+                    action {
+                        find(DemoWorkspace::class).dock(TestView2(),true)
+                    }
+                }
+                button("workspace.dock"){
                     action {
                         workspace.dock(TestView2(),true)
                         println("workspace.dock(): workspace.viewstack.size=${workspace.viewStack.size}")

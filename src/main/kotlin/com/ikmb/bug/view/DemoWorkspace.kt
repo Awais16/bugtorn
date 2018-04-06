@@ -20,6 +20,6 @@ class DemoWorkspace : Workspace("Hello Workspace") {
 
     override fun onCreate() {
         super.onCreate()
-        dock(TestView2())
+        dock(TestView2(),true)
     }
 }
